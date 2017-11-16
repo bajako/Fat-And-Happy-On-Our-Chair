@@ -13,7 +13,7 @@ At this moment I use:
 
 
 ### Demo
-If you would like see how it looks now :boom: , definetely look it up 
+If you would like see how it looks now :boom: , definitely look it up :point_right: https://bajako.github.io/
 
 
 ### Hope you like it
