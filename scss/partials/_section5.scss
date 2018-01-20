@@ -1,0 +1,181 @@
+
+section {
+  &.section-five {
+    @extend %clear-fix;
+  }
+  > div {
+    &.container {
+      @extend %container;
+    }
+    > div {
+      &.section-title-five {
+        @extend %section-title;
+        margin-bottom: 20px;
+      }
+      > span {
+        &.section-title__text {
+          @extend %section-title__text;
+        }
+      }
+      > div {
+        &.section-underline {
+          @extend %section-underline;
+        }
+      }
+    }
+    > div {
+      &.layout-2 {
+        @extend %clear-fix;
+        display: flex;
+      }
+    }
+  }
+}
+
+form {
+  &.form-left{
+    justify-content: flex-start;
+    width: 600px;
+    @extend %form;
+  }
+  > div {
+    &.form-group {
+      margin-bottom: 1em;
+    }
+    input {
+      @extend %input;
+      @extend %placeholder;
+      &:focus {
+        outline-color: #24BA9F;
+      }
+    }
+    textarea {
+      @include textarea {
+        height: 194px;
+        resize: none;
+      }
+      @extend %placeholder;
+      &:focus {
+        outline-color: #24BA9F;
+      }
+    }
+  }
+}
+
+div {
+  &.column-chair {
+    justify-content: flex-start;
+    width: 400px;
+  }
+  > img {
+    &.section-five-img{
+      padding-left: 80px;
+    }
+  }
+  > form {
+    &.form-right {
+      display: flex;
+      padding-left: 60px;
+      width: 400px;
+      flex-wrap: wrap;
+      @extend %form;
+    }
+  }
+}
+
+div {
+  &.check-box1 {
+    justify-content: flex-start;
+    margin-bottom: 1em;
+    @extend %check-box-size;
+  }
+  &.check-box2 {
+    color: #A9A9A9;
+    justify-content: flex-end;
+    font-size: 19px;
+    margin-bottom: 1em;
+    margin-left: 7px;
+    padding-top: 3px;
+    padding-left: 2px;
+    @include size(60px, 285px);
+  }
+  > label {
+    > input {
+      &.check-box {
+        margin: 0;
+        @include size(1px, 1px)
+      }
+      &:before {
+        background: #ffffff;
+        border: 1px solid #24BA9F;
+        content: '';
+        display: block;
+        @extend %check-box-size;
+      }
+      &:checked {
+        &:before {
+          background-image: url("../images/form_ok.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          box-shadow: 0 0 1px #156f5f;
+          @extend %check-box-size;
+        }
+      }
+    }
+  }
+}
+
+label {
+  width: 320px;
+  > input {
+    &.submit {
+      background-color: #24BA9F;
+      border-radius: 10px;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-weight: 800;
+      margin-bottom: 1em;
+      margin-left: auto;
+      margin-right: auto;
+      @extend %input;
+      @include size(64px, 340px);
+      &:hover {
+        background-color: pink;
+        border: 1px solid pink;
+        color: #24BA9F;
+      }
+    }
+    &.summary-submit{
+      background-color: #24BA9F;
+      border-radius: 10px;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-weight: 800;
+      margin-bottom: 28px;
+      margin-top: 50px;
+      margin-left: 40px;
+      margin-right: auto;
+      @extend %input;
+      font-size: 30px;
+      @include size(64px, 250px);
+      &:hover {
+        background-color: pink;
+        border: 1px solid pink;
+        color: #24BA9F;
+      }
+    }
+  }
+}
+
+
+
+
+.small{
+  height: 39px;
+  width: 39px;
+  line-height: 55px;
+  margin: 8px 0 8px 0;
+
+}
+
+

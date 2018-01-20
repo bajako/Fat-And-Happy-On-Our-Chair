@@ -1,0 +1,42 @@
+ /*-----FOOTER-----*/
+
+footer {
+  @extend %clear-fix;
+  >div {
+    &.container {
+      @extend %container;
+    }
+  }
+}
+
+div {
+  &.layout-footer {
+    @extend %clear-fix;
+    @extend %section-title;
+    margin-bottom: 20px;
+    display: flex;
+    > div {
+      &.trademark {
+        @include footer-content(flex-start, top, 10px, 600px) {
+          color: #A9A9A9;
+        }
+      }
+      &.social-media {
+        @include footer-content(flex-start, left, 60px, 250px);
+      }
+      &.footer-logo {
+        @include footer-content(flex-end, top, 10px, 150px) {
+          font-size: 20px;
+        }
+      }
+      > a {
+        &.footer-logo__text {
+          text-decoration: none;
+          color: #A9A9A9;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,8 @@ At this moment I use:
 
 - [x] HTML
 - [x] CSS
-- [ ] JavaScript
+- [x] JavaScript
+- [x] SASS
 - [ ] RWD
 - [ ] ...
 

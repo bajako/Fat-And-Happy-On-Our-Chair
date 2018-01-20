@@ -1,3 +1,5 @@
-.idea/*
-.git/*
-
+.idea
+.git
+*.*~
+node_modules
+package-lock.json

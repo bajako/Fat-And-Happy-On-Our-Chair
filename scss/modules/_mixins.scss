@@ -1,0 +1,294 @@
+
+
+
+
+
+%clear-fix{
+  &:before, &:after {
+    content: "";
+    display: block;
+    clear: both; }
+}
+
+%container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+%section-title {
+  margin-top: 40px;
+  color: initial;
+}
+
+%section-underline {
+width: 310px;
+height: 7px;
+background-color: #24BA9F;
+margin-top: 5px;
+}
+
+%input {
+  display: block;
+  height: 66px;
+  width: 100%;
+  padding: 10px;
+  margin-top: auto;
+  color:  #24BA9F;
+  border: 1px solid #24BA9F;
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+}
+@mixin textarea{
+  @extend %input;
+  @content;
+}
+
+
+@mixin footer-content($j-content, $p-direction, $p-value, $width){
+  justify-content: $j-content;
+  padding-#{$p-direction}: $p-value;
+  width: $width;
+  @content;
+}
+
+%placeholder {
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: lightgrey;;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: lightgrey;;
+    opacity: 1;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: lightgrey;;
+    opacity:  1;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgrey;;
+  }
+  &:-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgrey;;
+  }
+}
+
+%description{
+  height: 44px;
+  width: 315px;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  position: relative;
+  top:250px;
+  font-size: 25px;
+  line-height: 44px;
+}
+
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+%check-box-size{
+  height: 48px;
+  width: 48px;
+  justify-content: flex-start;
+}
+
+%sticker{
+  width: 320px;
+  height: 520px;
+  text-align: center;
+  position: relative;
+ // float: left;
+  justify-content: flex-start;
+  padding-left: 1px;
+}
+
+%circle-small{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: -20px;
+  left: 148px;
+}
+
+%circle-big {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: -36px;
+  left: 132px;
+}
+
+%plan {
+  font-size: 25px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  top: 20px;
+
+}
+
+%circle-price{
+  background-color: #FFFFFF;
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+}
+
+%circle-price-value{
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: 40px;
+  margin: 25px 0 5px 0;
+  letter-spacing: -1px;
+  word-spacing: -6px;
+  padding-left: 10px;
+}
+
+%sup{
+  font-weight: bold;
+  vertical-align: super;
+  font-size: 15px;
+  position: relative;
+  top: -8px;
+}
+
+%circle-price-curency{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+%btn-join{
+  height: 40px;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  position: absolute;
+  top: 450px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+%box {
+  width: 320px;
+  font-size: 13px;
+  background-size: contain;
+  margin-right: 20px;
+  height: 219px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+@mixin box($box-number){
+  background-image: url(../images/#{$box-number}_img.jpg);
+  @extend %box;
+}
+
+
+%section-one-underline{
+  width: 130px;
+  height: 7px;
+  background-color: #24BA9F;
+}
+
+%image-description{
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: 145px;
+  padding: 14px 0 22px 14px;
+  vertical-align: middle;
+}
+
+%gradient{
+  background: rgba(250, 250, 250, 1);
+  background: -moz-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(243, 243, 243, 1) 67%, rgba(208, 207, 215, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250, 250, 250, 1)), color-stop(67%, rgba(243, 243, 243, 1)), color-stop(100%, rgba(208, 207, 215, 1)));
+  background: -webkit-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(243, 243, 243, 1) 67%, rgba(208, 207, 215, 1) 100%);
+  background: -o-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(243, 243, 243, 1) 67%, rgba(208, 207, 215, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(243, 243, 243, 1) 67%, rgba(208, 207, 215, 1) 100%);
+  background: linear-gradient(to bottom, rgba(250, 250, 250, 1) 0%, rgba(243, 243, 243, 1) 67%, rgba(208, 207, 215, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#d0cfd7', GradientType=0);
+}
+
+
+@mixin arrow($direction){
+  justify-content: $direction;
+  @extend %arrow;
+}
+
+%arrow{
+  height: 450px;
+  width: 25px;
+  color: #24BA9F;
+  font-size: 60px;
+  padding: 195px 0 0 0;
+  cursor: pointer;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+
+
+%section-title__text{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@mixin sticker($border-color, $background-color, $margin) {
+  border: 2px solid $border-color;
+  background-color: $background-color;
+  margin: $margin;
+  @extend %sticker;
+}
+
+%form{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+}
+
+
+%summary-line-one{
+  height: 25px;
+  width: 185px;
+  line-height: 25px;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+%summary-line-two{
+  height: 25px;
+  width: 105px;
+  line-height: 25px;
+  font-size: 18px;
+  padding-right: 6px;
+  text-align: right;
+}
+
+%dropdown{
+  position: relative;
+  height: 75px;
+}

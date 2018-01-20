@@ -1,0 +1,247 @@
+
+section {
+  &.section-four {
+    @extend %clear-fix;
+    background-color: #F1F1F1;
+  }
+  > div {
+    &.container-section-four {
+      @extend %container;
+      display: flex;
+    }
+    > div {
+      &.compose-one {
+        width: 320px;
+        margin: auto 20px 5px auto;
+        justify-content: flex-start;
+      }
+      &.compose-two{
+        width: 320px;
+        margin: auto 20px auto auto;
+      }
+      &.compose-three {
+        width: 320px;
+        margin: 5;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      >div {
+        &.flex{
+          display: flex;
+          margin-top: 18px;
+          margin-bottom: 21px;
+        }
+      }
+      > img{
+        &.section-four-img{
+          display: block;
+          margin: 60px auto 80px auto;
+        }
+      }
+      > span{
+        &.invisible{}
+      }
+    }
+  }
+}
+
+div {
+  &.section-title-four-left {
+    @extend %section-title;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      &.section-underline {
+        @extend %section-underline;
+        justify-content: flex-start;
+      }
+    }
+  }
+  &.section-title-four-right {
+    @extend %section-title;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    > div {
+      &.section-underline {
+        @extend %section-underline;
+        justify-content: flex-end;
+      }
+    }
+  }
+  > span {
+    &.section-title__text-left {
+      @extend %section-title__text;
+      display: block;
+      justify-content: flex-start;
+      word-spacing: 5px;
+    }
+    &.section-title__text-right {
+      @extend %section-title__text;
+      display: block;
+      justify-content: flex-end;
+    }
+  }
+}
+
+  /* DROPDOWN */
+
+div {
+  &.compose-dropdown-one {
+    @extend %dropdown;
+  }
+  &.compose-dropdown-two {
+    @extend %dropdown;
+  }
+  &.compose-dropdown-three {
+    @extend %dropdown;
+  }
+  > button {
+    &.btn {
+      height: 55px;
+      width: 310px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 55px;
+      background-color: white;
+      cursor: pointer;
+      border: 1px solid #24BA9F;
+      color: lightgrey;
+      font-size: 25px;
+      font-family: 'Raleway', sans-serif;
+      display: flex;
+      justify-content: space-between;
+
+    }
+    &:focus {
+      outline-color: #24BA9F;
+    }
+  }
+  > ul {
+    &.dropdown-menu {
+      padding-left: 6px;
+      border: 1px solid lightgrey;
+      width: 310px;
+      position: relative;
+      margin-top: 0;
+      margin-left: 5px;
+      background-color: white;
+    }
+    &.dropdown-menu-one {
+      z-index: 4;
+    }
+    &.dropdown-menu-two {
+      z-index: 3;
+    }
+    &.dropdown-menu-three {
+      z-index: 2;
+    }
+    > li {
+      letter-spacing: 1px;
+      list-style: none;
+      line-height: 25px;
+      width: 300px;
+      justify-content: flex-start;
+      > a {
+        text-decoration: none;
+        color: initial;
+      }
+    }
+  }
+}
+
+div {
+  &.compose-check-box2 {
+    color: #A9A9A9;
+    font-size: 30px;
+    margin-left: 40px;
+    margin-top: 13px;
+    @include size(60px, 270px);
+  }
+}
+
+div {
+  &.summary {
+    width: 310px;
+    height: 205px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-left: 10px;
+  }
+  > ul {
+    &.summary-ul-one {
+      padding-left: 6px;
+      width: 190px;
+      height: 145px;
+      background-color: white;
+      margin: 0;
+      border-right: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+    }
+    &.summary-ul-two {
+      padding-left: 6px;
+      width: 110px;
+      height: 145px;
+      background-color: white;
+      margin: 0;
+      border-bottom: 1px solid lightgrey;
+    }
+    > li {
+      &#chair {
+        @extend %summary-line-one;
+        color: #24BA9F;
+        font-size: 22px;
+        > a {
+          color: inherit;
+        }
+      }
+      &#chair2 {
+        @extend %summary-line-two;
+        color: #24BA9F;
+        font-size: 22px;
+        > a {
+          color: inherit;
+        }
+      }
+      &#color {
+        @extend %summary-line-one;
+      }
+      &#color2 {
+        @extend %summary-line-two;
+      }
+      &#fabric {
+        @extend %summary-line-one;
+      }
+      &#fabric2 {
+        @extend %summary-line-two;
+      }
+      &#transport {
+        @extend %summary-line-one;
+      }
+      &#transport2 {
+        @extend %summary-line-two;
+      }
+    }
+  }
+  > div {
+    &.summary-div-one {
+      height: 40px;
+      width: 190px;
+      line-height: 40px;
+      font-size: 25px;
+      padding-left: 6px;
+    }
+    &.summary-div-two {
+      height: 40px;
+      width: 105px;
+      line-height: 40px;
+      font-size: 25px;
+      padding-right: 6px;
+      text-align: right;
+    }
+  }
+}

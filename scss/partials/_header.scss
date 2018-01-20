@@ -1,0 +1,122 @@
+/*-----HEADER-----*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+header {
+  &.site-header{
+    background-color: black;
+    @extend %clear-fix;
+  }
+  > div {
+    &.container {
+      @extend %container;
+    }
+    > div {
+      &.layout-2-col {
+        @extend %clear-fix;
+        display: flex;
+      }
+    }
+  }
+}
+
+div {
+  &.logo-header {
+    font-size: 14px;
+    font-weight: 600;
+    width: 50%;
+    padding: 12px 0 12px 0;
+    letter-spacing: 1px;
+  }
+  > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-flex;
+    > span {
+      color: #24BA9F;
+      font-weight: 900;
+    }
+  }
+}
+
+nav {
+  &[role=navigation] {
+    width: 50%;
+  }
+  > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    &.navBar {
+      display: flex;
+      width: 600px;
+      margin: auto;
+      padding-left: 160px;
+    }
+  }
+}
+
+ul.navBar {
+  li {
+    padding: 10px 25px;
+    &:hover{
+      > ul{
+        &.dropDown{
+          display: block;
+        }
+      }
+    }
+    > a {
+      color: #FFFFFF;
+      text-align: right;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      &.dropDown {
+        position: absolute;
+        display: none;
+        padding-top: 20px;
+      }
+      > div {
+        &.triangle {
+          position: absolute;
+          top: 10px;
+          margin-left: 30px;
+          border-style: solid;
+          border-width: 0 8px 12px 8px;
+          border-color: transparent transparent #000000 transparent;
+        }
+      }
+      > li {
+        display: block;
+        padding: 10px 20px 0 10px;
+        background-color: #000000;
+        &:last-child {
+          padding-bottom: 10px;
+        }
+        > a {
+          color: #FFFFFF;
+          display: block;
+          text-align: left;
+          background-color: black;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+}

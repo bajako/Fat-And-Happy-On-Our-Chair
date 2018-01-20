@@ -1,0 +1,151 @@
+
+section {
+  &.section-three {
+    background-color: #F1F1F1;
+    margin-top: 60px;
+    @extend %clear-fix;
+  }
+  > div{
+    &.container {
+      @extend %container;
+    }
+    &.flex-direction{
+      flex-direction: column;
+    }
+    > div{
+      &.section-title-three{
+        @extend %section-title;
+      }
+      > span {
+        &.section-title__text{
+          @extend %section-title__text;
+        }
+      }
+      > div {
+        &.section-underline {
+          @extend %section-underline;
+        }
+      }
+      &.layout-3 {
+        margin-bottom: 70px;
+        margin-top: 70px;
+        @extend %clear-fix;
+        display: flex;
+      }
+    }
+  }
+}
+
+div {
+  &.sticker-one {
+    @include sticker(#C0C0C0, #F9F9F9, auto 20px auto auto)
+  }
+  &.sticker-two {
+    @include sticker(#24BA9F, #24BA9F, auto 20px auto auto);
+  }
+  &.sticker-three {
+    @include sticker(#C0C0C0, #F9F9F9, auto)
+  }
+  > div {
+    &.circle-small-one {
+      background-color: #C0C0C0;
+      @extend %circle-small;
+    }
+    &.circle-small-two {
+      background-color: #FFFFFF;
+      @extend %circle-small;
+    }
+  }
+  > div {
+    &.circle-big-one {
+      background-color: #FFFFFF;
+      border: 2px solid #C0C0C0;
+      @extend %circle-big;
+    }
+    &.circle-big-two {
+      background-color: #24BA9F;
+      @extend %circle-big;
+    }
+  }
+  > div {
+    &.plan-one{
+      @extend %plan;
+      color: #24BA9F;
+    }
+    &.plan-two {
+      @extend %plan;
+      color: #FFFFFF;
+    }
+  }
+  > div {
+    &.circle-price-one {
+      border: 2px solid #C0C0C0;
+      color: #C0C0C0;
+      @extend %circle-price;
+    }
+    &.circle-price-two {
+      color: #24BA9F;
+      @extend %circle-price;
+    }
+    > p {
+      &.circle-one-price-value{
+        @extend %circle-price-value;
+      }
+      &.circle-two-price-value {
+        @extend %circle-price-value;
+      }
+      > sup {
+        @extend %sup;
+      }
+
+    }
+    > span {
+      &.circle-price-curency{
+        @extend %circle-price-curency;
+      }
+      &.circle-two-price-curency{
+        @extend %circle-price-curency;
+      }
+    }
+  }
+  > div {
+    &.description-one {
+      background-color: #E4E4E4;
+      color: #848484;
+      @extend %description;
+    }
+  }
+  > div {
+    &.description-two {
+      background-color: #F1F1F1;
+      color: #848484;
+      @extend %description;
+    }
+  }
+  > div {
+    &.description-three {
+      background-color: #FFFFFF;
+      color: #848484;
+      @extend %description;
+    }
+  }
+  > div {
+    &.description-four {
+      background-color: #F1F1F1;
+      color: #848484;
+      @extend %description;
+    }
+  }
+  > button {
+    &.btn-join-one {
+      @extend %btn-join;
+      color: #FFFFFF;
+      background-color: #24BA9F;
+    }
+    &.btn-join-two {
+      @extend %btn-join;
+      background-color: #FFFFFF;
+      color: #24BA9F;
+    }
+  }
+}
