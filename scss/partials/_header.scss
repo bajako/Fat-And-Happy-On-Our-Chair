@@ -15,15 +15,11 @@ header {
     background-color: black;
     @extend %clear-fix;
   }
-  > div {
-    &.container {
-      @extend %container;
-    }
-    > div {
-      &.layout-2-col {
-        @extend %clear-fix;
-        display: flex;
-      }
+  > .container {
+    @extend %container;
+    > .layout-2-col {
+      @extend %clear-fix;
+      display: flex;
     }
   }
 }

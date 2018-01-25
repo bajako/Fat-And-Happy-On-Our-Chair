@@ -2,15 +2,13 @@
 
 footer {
   @extend %clear-fix;
-  >div {
-    &.container {
+  >.container {
       @extend %container;
     }
-  }
 }
 
-div {
-  &.layout-footer {
+
+  .layout-footer {
     @extend %clear-fix;
     @extend %section-title;
     margin-bottom: 20px;
@@ -29,14 +27,12 @@ div {
           font-size: 20px;
         }
       }
-      > a {
-        &.footer-logo__text {
+      >.footer-logo__text {
           text-decoration: none;
           color: #A9A9A9;
           display: flex;
           justify-content: flex-end;
-        }
       }
     }
   }
-}
+
