@@ -1,20 +1,5 @@
 document.addEventListener( 'DOMContentLoaded', function () {
 
-
-    // /* dropdown */
-    //
-    // var dropDown = document.querySelector('.navBar').children[0];
-    //
-    // dropDown.addEventListener('mouseover', function () {
-    //     dropDown.children[1].style.display = 'block';
-    // });
-    //
-    // dropDown.addEventListener('mouseout', function () {
-    //     dropDown.children[1].style.display = 'none';
-    // });
-    //
-
-
     /* SECTION TWO DISAPPEAR */
 
     var boxOne = document.querySelector('.box-one');
@@ -73,7 +58,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     };
 
 
-    next.addEventListener('click', function (e) {
+    next.addEventListener('click', function () {
 
         console.log('next');
         nextChair();
@@ -84,7 +69,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
         console.log('prev');
         prevChair();
     });
-
 
 
     /* SECTION FOUR COMPOSE ORDER */
@@ -129,7 +113,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         if (parseInt(orderResult.dataset.value) < parseInt(orderResultTemp.dataset.value)){
             orderResult.dataset.value = parseInt(orderResultTemp.dataset.value);
         }
-        orderResult.innerText = orderResult.dataset.value + " zł"
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     }
 
     orderResult.classList.toggle('invisible');
@@ -139,7 +123,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     composeOne.addEventListener('click', function () {
 
-        chair.innerText = "Twój fotel";
+        chair.innerText = 'Twój fotel';
 
         composeOneList.classList.toggle('invisible');
         chair2.classList.add('invisible');
@@ -164,7 +148,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         chair2.classList.toggle('invisible');
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
     /* SECOND CHAIR */
@@ -180,7 +164,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         chair2.classList.toggle('invisible');
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
     /* THIRD CHAIR */
@@ -196,7 +180,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         chair2.classList.toggle('invisible');
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
 
@@ -204,7 +188,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     composeTwo.addEventListener('click', function () {
 
-        color.innerText = " ";
+        color.innerText = '';
 
         composeTwoList.classList.toggle('invisible');
         color2.classList.add('invisible');
@@ -228,7 +212,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         color2.classList.toggle('invisible');
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
     /* SECOND COLOR */
@@ -244,7 +228,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         color2.classList.toggle('invisible');
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
     /* THIRD COLOR */
@@ -260,7 +244,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         color2.classList.toggle('invisible');
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
 
@@ -268,7 +252,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     composeThree.addEventListener('click', function () {
 
-        fabric.innerText = "";
+        fabric.innerText = '';
 
         composeThreeList.classList.toggle('invisible');
         fabric2.classList.add('invisible');
@@ -292,7 +276,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         fabric2.classList.toggle('invisible');
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
     /* SECOND FABRIC */
@@ -309,7 +293,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 
         orderCalculate();
-        orderResult.innerText = orderResult.dataset.value + " zł";
+        orderResult.innerText = orderResult.dataset.value + ' zł';
     });
 
 
@@ -321,21 +305,20 @@ document.addEventListener( 'DOMContentLoaded', function () {
         j=j+1;
 
         if (j%2 === 0){
-            transport.innerText = "Transport";
+            transport.innerText = 'Transport';
             transport2.innerText = composeTransport.dataset.value;
             transport2.dataset.value = composeTransport.dataset.value;
 
             orderCalculate();
-            orderResult.innerText = orderResult.dataset.value + " zł";
+            orderResult.innerText = orderResult.dataset.value + ' zł';
             firstCheck();
         }
         else if (j%2 !== 0){
-            transport.innerText = "";
+            transport.innerText = '';
+            transport2.dataset.value = 0;
 
             orderCalculate();
-            orderResult.dataset.value = parseInt(orderResult.dataset.value) - parseInt(transport2.dataset.value);
-
-            orderResult.innerText = orderResult.dataset.value;
+            orderResult.innerText = orderResult.dataset.value + ' zł';
             orderResultTemp.dataset.value = orderResult.dataset.value;
         }
 

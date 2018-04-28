@@ -12,7 +12,7 @@ section {
     > div {
       &.compose-one {
         width: 320px;
-        margin: auto 20px 5px auto;
+        margin: auto 20px 15px auto;
         justify-content: flex-start;
       }
       &.compose-two{
@@ -21,7 +21,7 @@ section {
       }
       &.compose-three {
         width: 320px;
-        margin: 5;
+        margin: 5px;
         display: flex;
         flex-wrap: wrap;
       }
@@ -102,7 +102,7 @@ div {
     &.btn {
       height: 55px;
       width: 310px;
-      margin-left: auto;
+      //margin-left: auto;
       margin-right: auto;
       line-height: 55px;
       background-color: white;
