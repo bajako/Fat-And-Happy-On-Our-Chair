@@ -1,13 +1,26 @@
 {
-  "name": "0_gulp",
+  "name": "memory_game",
   "version": "1.0.0",
-  "description": "<img alt=\"Logo\" src=\"http://coderslab.pl/svg/logo-coderslab.svg\" width=\"400\">",
+  "description": "Memory Game React App",
+  "homepage": "https://bajako.github.io/Fat-And-Happy-On-Our-Chair",
+  "bugs": {
+    "url": "https://github.com/bajako/Fat-And-Happy-On-Our-Chair/issues",
+    "email": "ba.jakoniuk@gmail.com"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "Bartek Jakoniuk",
+    "email": "ba.jakoniuk@gmail.com",
+    "url": "https://github.com/bajako"
+  },
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bajako/Fat-And-Happy-On-Our-Chair.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.4",
