@@ -325,12 +325,12 @@ div {
   }
 
   div.arrow-left-price {
-    display: none;
-   grid-column: 1/2;
+    visibility: hidden;
+    grid-column: 1/2;
   }
 
   div.arrow-right-price {
-    display: none;
+    visibility: hidden;
     grid-column: 3/4;
   }
 }
