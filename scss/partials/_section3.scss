@@ -300,35 +300,37 @@ div {
     text-align: center;
   }
 
-  div.grid-container-three {
-    grid-template-columns: 1fr;
-    display: grid;
-  }
+  //div.grid-container-three {
+  //  grid-template-columns: 1fr;
+  //  display: grid;
+  //}
 
   div.sticker-one {
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 1/2;
     display: block;
   }
 
   div.sticker-two {
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 2/3;
     display: block;
     margin: 60px auto;
   }
 
   div.sticker-three {
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 3/4;
     display: block;
   }
 
   div.arrow-left-price {
     display: none;
+   grid-column: 1/2;
   }
 
   div.arrow-right-price {
     display: none;
+    grid-column: 3/4;
   }
 }
