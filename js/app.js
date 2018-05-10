@@ -24,6 +24,52 @@ document.addEventListener( 'DOMContentLoaded', function () {
     });
 
 
+
+    var next2 = document.querySelector('.section-three .arrow-right-price'),
+        prev2 = document.querySelector('.section-three .arrow-left-price'),
+        el2 = document.querySelectorAll('.section-three div.slider'),
+        z = 0;
+    console.log(next2);
+    console.log(el2);
+
+    el2[z].classList.add('visible');
+
+  var nextPrice = function() {
+    el2[z].classList.remove('visible');
+    z++;
+
+    if( z===el2.length){
+      z=0;
+    }
+
+    el2[z].classList.add('visible');
+  };
+
+  var prevPrice = function(){
+
+    el2[z].classList.remove('visible');
+    z--;
+
+    if( z<0){
+      z=el2.length-1;
+    }
+
+    el2[z].classList.add('visible');
+  };
+
+  next2.addEventListener('click', function () {
+
+    console.log('next');
+    nextPrice();
+  });
+
+
+  prev2.addEventListener('click', function () {
+    console.log('prev');
+    prevPrice();
+  });
+
+
     /* SECTION ONE SLIDER */
 
     var next = document.querySelector('.arrow-right'),

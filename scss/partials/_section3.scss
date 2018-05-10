@@ -1,8 +1,6 @@
-
 section {
   &.section-three {
     background-color: #F1F1F1;
-    margin-top: 60px;
     @extend %clear-fix;
   }
   > div{
@@ -27,21 +25,43 @@ section {
         }
       }
       &.layout-3 {
-        margin-bottom: 70px;
         margin-top: 70px;
         @extend %clear-fix;
-        display: flex;
       }
     }
   }
 }
 
 div {
+  &.slider {
+    display: none;
+    justify-content: center;
+  }
+  &.visible{
+    display: inline-block;
+    margin: 0 auto;
+  }
+  &.arrow-left-price {
+    color: #24BA9F;
+    font-size: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+  }
+  &.arrow-right-price {
+    color: #24BA9F;
+    font-size: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+  }
   &.sticker-one {
-    @include sticker(#C0C0C0, #F9F9F9, auto 20px auto auto)
+    @include sticker(#C0C0C0, #F9F9F9, auto)
   }
   &.sticker-two {
-    @include sticker(#24BA9F, #24BA9F, auto 20px auto auto);
+    @include sticker(#24BA9F, #24BA9F, auto);
   }
   &.sticker-three {
     @include sticker(#C0C0C0, #F9F9F9, auto)
@@ -68,7 +88,7 @@ div {
     }
   }
   > div {
-    &.plan-one{
+    &.plan-one {
       @extend %plan;
       color: #24BA9F;
     }
@@ -88,7 +108,7 @@ div {
       @extend %circle-price;
     }
     > p {
-      &.circle-one-price-value{
+      &.circle-one-price-value {
         @extend %circle-price-value;
       }
       &.circle-two-price-value {
@@ -97,13 +117,12 @@ div {
       > sup {
         @extend %sup;
       }
-
     }
     > span {
-      &.circle-price-curency{
+      &.circle-price-curency {
         @extend %circle-price-curency;
       }
-      &.circle-two-price-curency{
+      &.circle-two-price-curency {
         @extend %circle-price-curency;
       }
     }
@@ -136,16 +155,180 @@ div {
       @extend %description;
     }
   }
-  > button {
-    &.btn-join-one {
-      @extend %btn-join;
-      color: #FFFFFF;
-      background-color: #24BA9F;
+  > label {
+    > input {
+      &.btn-join-one {
+        @extend %btn-join;
+        color: #FFFFFF;
+        background-color: #24BA9F;
+      }
+      &.btn-join-two {
+        @extend %btn-join;
+        background-color: #FFFFFF;
+        color: #24BA9F;
+      }
     }
-    &.btn-join-two {
-      @extend %btn-join;
-      background-color: #FFFFFF;
-      color: #24BA9F;
-    }
+  }
+}
+
+@media all and (min-width: 981px) {
+
+  div.grid-container-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    display: grid;
+  }
+
+  div.sticker-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0 auto;
+    display: initial;
+  }
+
+  div.sticker-two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 auto;
+    display: initial;
+  }
+
+  div.sticker-three {
+    grid-column: 3/4;
+    margin: 0 auto;
+    grid-row: 1/2;
+    display: initial;
+  }
+
+  div.arrow-left-price{
+    display: none;
+  }
+
+  div.arrow-right-price{
+    display: none;
+  }
+}
+
+
+@media all and (max-width: 980px){
+  div.section-title-three {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+
+  div.grid-container-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    justify-content: center;
+  }
+
+  div.sticker-one {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.sticker-two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.sticker-three {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.arrow-left-price {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  div.arrow-right-price {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+
+
+
+
+@media all and (max-width: 736px) {
+
+  div.section-title-three {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+
+  div.grid-container-three {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    justify-content: center;
+  }
+
+  div.sticker-one {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.sticker-two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.sticker-three {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.arrow-left-price {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  div.arrow-right-price {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+
+@media all and (max-width: 480px) {
+
+  div.section-title-three {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+
+  div.grid-container-three {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  div.sticker-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: block;
+  }
+
+  div.sticker-two {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: block;
+    margin: 60px auto;
+  }
+
+  div.sticker-three {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: block;
+  }
+
+  div.arrow-left-price {
+    display: none;
+  }
+
+  div.arrow-right-price {
+    display: none;
   }
 }

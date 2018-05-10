@@ -1,4 +1,3 @@
-
 section {
   &.section-four {
     @extend %clear-fix;
@@ -7,81 +6,49 @@ section {
   > div {
     &.container-section-four {
       @extend %container;
-      display: flex;
-    }
-    > div {
-      &.compose-one {
-        width: 320px;
-        margin: auto 20px 15px auto;
-        justify-content: flex-start;
-      }
-      &.compose-two{
-        width: 320px;
-        margin: auto 20px auto auto;
-      }
-      &.compose-three {
-        width: 320px;
-        margin: 5px;
-        display: flex;
-        flex-wrap: wrap;
-      }
-      >div {
-        &.flex{
-          display: flex;
-          margin-top: 18px;
-          margin-bottom: 21px;
-        }
-      }
-      > img{
-        &.section-four-img{
-          display: block;
-          margin: 60px auto 80px auto;
-        }
-      }
-      > span{
-        &.invisible{}
-      }
     }
   }
 }
 
 div {
+  &.flex{
+    display: flex;
+  }
+}
+
+img{
+  &.section-four-img{
+    display: block;
+    margin: 80px auto 0;
+  }
+}
+
+
+div {
   &.section-title-four-left {
     @extend %section-title;
     margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
     > div {
-      &.section-underline {
+      &.section-underline-four {
         @extend %section-underline;
-        justify-content: flex-start;
       }
     }
   }
   &.section-title-four-right {
     @extend %section-title;
     margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
     > div {
-      &.section-underline {
+      &.section-underline-four {
         @extend %section-underline;
-        justify-content: flex-end;
       }
     }
   }
   > span {
     &.section-title__text-left {
       @extend %section-title__text;
-      display: block;
-      justify-content: flex-start;
-      word-spacing: 5px;
     }
     &.section-title__text-right {
       @extend %section-title__text;
-      display: block;
-      justify-content: flex-end;
     }
   }
 }
@@ -101,9 +68,8 @@ div {
   > button {
     &.btn {
       height: 55px;
-      width: 310px;
-      //margin-left: auto;
-      margin-right: auto;
+      width: 90%;
+      margin: 0 auto;
       line-height: 55px;
       background-color: white;
       cursor: pointer;
@@ -113,7 +79,6 @@ div {
       font-family: 'Raleway', sans-serif;
       display: flex;
       justify-content: space-between;
-
     }
     &:focus {
       outline-color: #24BA9F;
@@ -121,12 +86,11 @@ div {
   }
   > ul {
     &.dropdown-menu {
-      padding-left: 6px;
+      padding: 1px 6px;
       border: 1px solid lightgrey;
-      width: 310px;
+      width: 90%;
       position: relative;
-      margin-top: 0;
-      margin-left: 5px;
+      margin: 0 auto;
       background-color: white;
     }
     &.dropdown-menu-one {
@@ -142,7 +106,6 @@ div {
       letter-spacing: 1px;
       list-style: none;
       line-height: 25px;
-      width: 300px;
       justify-content: flex-start;
       > a {
         text-decoration: none;
@@ -156,26 +119,26 @@ div {
   &.compose-check-box2 {
     color: #A9A9A9;
     font-size: 30px;
-    margin-left: 40px;
-    margin-top: 13px;
-    @include size(60px, 270px);
+    line-height: 60px;
+    height: 60px;
   }
 }
 
 div {
   &.summary {
-    width: 310px;
+    width: 90%;
     height: 205px;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    margin-left: 10px;
+    margin: 0 auto;
   }
   > ul {
     &.summary-ul-one {
+      padding-top: 6px;
       padding-left: 6px;
-      width: 190px;
+      width: 70%;
       height: 145px;
       background-color: white;
       margin: 0;
@@ -184,7 +147,7 @@ div {
     }
     &.summary-ul-two {
       padding-left: 6px;
-      width: 110px;
+      width: 30%;
       height: 145px;
       background-color: white;
       margin: 0;
@@ -230,18 +193,209 @@ div {
   > div {
     &.summary-div-one {
       height: 40px;
-      width: 190px;
+      width: 70%;
       line-height: 40px;
       font-size: 25px;
       padding-left: 6px;
     }
     &.summary-div-two {
       height: 40px;
-      width: 105px;
+      width: 30%;
       line-height: 40px;
       font-size: 25px;
       padding-right: 6px;
       text-align: right;
     }
+  }
+}
+
+input.summary-submit{
+  background-color: #24BA9F;
+  border-radius: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 800;
+  @extend %input;
+  font-size: 30px;
+  height: 64px;
+  &:hover {
+    background-color: pink;
+    border: 1px solid pink;
+    color: #24BA9F;
+  }
+}
+
+
+@media all and (min-width: 981px) {
+
+  div.section-title-four-right {
+    text-align: end;
+  }
+
+  div.section-title-four-left {
+    text-align: start;
+  }
+
+  div.grid-container-four {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 40px;
+    display: grid;
+  }
+
+  div.compose-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  div.flex {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  input.transport {
+    margin: 0 77px 47px 0;
+  }
+
+  div.compose-two {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.compose-three {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  input.summary-submit {
+    margin: 50px auto 40px auto;
+    width: 290px;
+  }
+}
+
+@media all and (max-width: 980px){
+
+  div.grid-container-four {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+
+  div.compose-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  div.section-underline-four {
+    width: 310px;
+    margin: 0 auto;
+  }
+
+  div.compose-two {
+    display: none;
+  }
+
+  div.compose-three {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  div.section-title-four-left {
+    text-align: center;
+  }
+
+  div.section-title-four-right {
+    text-align: center;
+  }
+
+  input.summary-submit {
+    margin: 50px auto 20px auto;
+    width: 285px;
+  }
+
+  div.flex {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  input.transport {
+    margin: 0 77px 47px 0;
+  }
+}
+
+@media all and (max-width: 736px) {
+
+  div.grid-container-four {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  div.compose-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+  }
+
+  div.section-title-four-left {
+    text-align: center;
+  }
+
+  div.flex {
+    justify-content: center;
+    align-items: center;
+  }
+
+  input.transport {
+    margin: 0 77px 47px 0;
+  }
+
+  div.compose-two {
+    display: none;
+  }
+
+  div.compose-three {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  div.section-title-four-right {
+    text-align: center;
+  }
+
+  label.summary-submit {
+    justify-content: center;
+  }
+
+  input.summary-submit {
+    width: 250px;
+    margin: 20px 0 20px 0
+  }
+}
+
+
+@media all and (max-width: 480px) {
+
+  div.grid-container-four {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  div.compose-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+
+  div.compose-two {
+    display: none;
+  }
+
+  label.summary-submit {
+    justify-content: center;
+  }
+
+  input.summary-submit {
+    width: 250px;
+    margin: 20px 0 20px 0
   }
 }

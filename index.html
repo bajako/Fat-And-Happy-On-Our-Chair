@@ -6,36 +6,38 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
     <script src="js/app.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<!-----HEADER----->
-  <header class="site-header clearFix">
-    <div class="container">
-      <div class="row layout-2-col">
-        <div class="logo-header">
-          <a href="#">SIT<span>ON</span>CHAIR</a>
-        </div>
-        <nav role="navigation">
-          <ul class="navBar">
-            <li>
-              <a href="#">O FIRMIE</a>
-              <ul class="dropDown">
-                <div class="triangle">
-                </div>
-                <li><a href="#">Aktualności</a></li>
-                <li><a href="#">Nasz team</a></li>
-                <li><a href="#">Historia</a></li>
-              </ul>
-            </li>
-            <li><a href="#">GALERIA</a></li>
-            <li><a href="#">KONTAKT</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+<body>
+<!-- -&#45;&#45;HEADER-&#45;&#45;-->
+  <!--<header class="site-header clearFix">-->
+    <!--<div class="container">-->
+      <!--<div class="row layout-2-col">-->
+        <!--<div class="logo-header">-->
+          <!--<a href="#">SIT<span>ON</span>CHAIR</a>-->
+        <!--</div>-->
+        <!--<nav role="navigation">-->
+          <!--<ul class="navBar">-->
+            <!--<li>-->
+              <!--<a href="#">O FIRMIE</a>-->
+              <!--<ul class="dropDown">-->
+                <!--<div class="triangle">-->
+                <!--</div>-->
+                <!--<li><a href="#">Aktualności</a></li>-->
+                <!--<li><a href="#">Nasz team</a></li>-->
+                <!--<li><a href="#">Historia</a></li>-->
+              <!--</ul>-->
+            <!--</li>-->
+            <!--<li><a href="#">GALERIA</a></li>-->
+            <!--<li><a href="#">KONTAKT</a></li>-->
+          <!--</ul>-->
+        <!--</nav>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</header>-->
 <!-----SECTION ONE----->
-  <section class="section-one clearFix">
-    <div class="row container">
+  <section class="section-one">
+    <div class="grid-container-one container">
       <div class="arrow-left">
         <
       </div>
@@ -54,8 +56,7 @@
         <div class="content">
           Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
         </div>
-        <a href="#"><div class="section-one-button">ZOBACZ WIĘCEJ
-        </div></a>
+        <label> <input type="button"  class="section-one-button" value="ZOBACZ WIĘCEJ"/></label>
       </div>
       <div class="arrow-right">
          >
@@ -64,7 +65,7 @@
   </section>
 <!-----SECTION TWO----->
   <section class="section-two clearFix">
-    <div class="row container">
+    <div class="grid-container-two container">
       <div class="box-one">
         <div class="image-description">
           <h3>Chair CLAIR</h3>
@@ -96,8 +97,11 @@
         <div class="section-underline">
         </div>
       </div>
-      <div class="row layout-3">
-        <div class="sticker-one">
+      <div class="grid-container-three layout-3">
+        <div class="arrow-left-price">
+          <
+        </div>
+        <div class="slider sticker-one">
           <div class="circle-small-one">
           </div>
           <div class="circle-big-one">
@@ -112,10 +116,10 @@
           </div>
           <div class="description-two">Serwis
           </div>
-          <button class="btn-join-one">DOŁĄCZ
-          </button>
+          <label>
+            <input type="button" value="DOŁĄCZ" class="btn-join-one"/></label>
         </div>
-        <div class="sticker-two">
+        <div class="slider sticker-two">
           <div class="circle-small-two">
           </div>
           <div class="circle-big-two">
@@ -132,10 +136,10 @@
           </div>
           <div class="description-three">Gwarancja 5 lat
           </div>
-          <button class="btn-join-two">DOŁĄCZ
-          </button>
+          <label>
+            <input type="button" value="DOŁĄCZ" class="btn-join-two"/></label>
         </div>
-        <div class="sticker-three">
+        <div class="slider sticker-three">
           <div class="circle-small-one">
           </div>
           <div class="circle-big-one">
@@ -154,19 +158,22 @@
           </div>
           <div class="description-four">Porady projektanta
           </div>
-          <button class="btn-join-one">DOŁĄCZ
-          </button>
+          <label>
+            <input type="button" value="DOŁĄCZ" class="btn-join-one"/></label>
+        </div>
+        <div class="arrow-right-price">
+          >
         </div>
       </div>
     </div>
   </section>
 <!-----SECTION FOUR----->
   <section class="section-four">
-    <div class="container-section-four layout-3">
+    <div class="container-section-four grid-container-four layout-3">
       <div class="compose-one">
         <div class="section-title-four-left">
           <span class="section-title__text-left">SKOMPONUJ WŁASNE KRZESŁO</span>
-          <div class="section-underline">
+          <div class="section-underline-four">
           </div>
         </div>
         <div class="compose-dropdown-one">
@@ -199,9 +206,9 @@
           </ul>
         </div>
         <div class="flex">
-          <div class="check-box1">
+          <div class="compose-check-box1">
             <label >
-              <input type="checkbox" data-value="80 zł" class="transport"></label>
+              <input type="checkbox" data-value="80 zł" class="transport check-box"></label>
           </div>
           <div class="compose-check-box2">
             Transport
@@ -215,7 +222,7 @@
       <div class="compose-three">
         <div class="section-title-four-right">
           <span class="section-title__text-right">PODSUMOWANIE</span>
-          <div class="section-underline">
+          <div class="section-underline-four">
           </div>
         </div>
         <div class="summary">
@@ -234,7 +241,7 @@
           <div class="summary-div-one">SUMA</div>
           <div id="orderResult" data-value="4" class="summary-div-two"> 0 </div>
         </div>
-        <label>
+        <label class="summary-submit">
           <input type="submit" value="ZAMAWIAM" class ="form-group summary-submit" >
         </label>
       </div>
@@ -242,61 +249,60 @@
   </section>
 <!-----SECTION FIVE----->
   <section class="section-five clearFix">
-    <div class="container flex-direction">
+    <div class="container grid-container-five flex-direction">
       <div class="section-title-five">
         <span class="section-title__text">KONTAKT</span>
         <div class="section-underline">
         </div>
       </div>
-      <div class="row layout-2">
+      <div class="layout-2">
         <form class="form-left">
           <div class="form-group">
             <label>
-              <input type="text" name="username" placeholder="Imię" ></label>
+              <input type="text" name="username" placeholder="Imię" class="input-section-five" ></label>
           </div>
           <div class="form-group">
             <label>
-              <input type="email" name="email" placeholder="email" ></label>
+              <input type="email" name="email" placeholder="email" class="input-section-five" ></label>
           </div>
           <div class="form-group">
             <label>
-              <textarea placeholder="Wiadomość"></textarea> </label>
+              <textarea placeholder="Wiadomość" class="input-section-five"></textarea> </label>
           </div>
         </form>
-        <div class="column-chair">
-          <img class="section-five-img" src="images/red_chair.png">
-          <form class="form-right">
-            <div class="check-box1">
-              <label class="checkboxPicture">
-                <input class="check-box" type="checkbox"></label>
-            </div>
-            <div class="check-box2">
-              Zgadzam sie na przetwarzanie danych osobowych
-            </div>
-            <label>
-              <input type="submit" value="WYŚLIJ" class ="form-group submit" ></label>
-          </form>
-        </div>
+        <img class="section-five-img" src="images/red_chair.png">
+        <form class="form-right">
+          <div class="check-box1">
+            <label class="checkboxPicture">
+              <input class="check-box" type="checkbox"></label>
+          </div>
+          <div class="check-box2">
+            Zgadzam sie na przetwarzanie danych osobowych
+          </div>
+          <label class="submit">
+            <input type="submit" value="WYŚLIJ" class ="form-group submit" ></label>
+        </form>
       </div>
     </div>
   </section>
 <!-----FOOTER----->
-  <footer class="site-footer clearFix">
-    <div class="container">
-      <div class="row layout-footer">
-        <div class="trademark">
-                Copyright 2018 | All Rights Reserved. - Sit On Chair
-        </div>
-        <div class="social-media">
-          <a href="#"><img src="images/flickr.png"/></a>
-          <a href="#"><img src="images/vimeo.png"/></a>
-          <a href="#"><img src="images/pinterest.png"/></a>
-          <a href="#"><img src="images/twitter.png"/></a>
-        </div>
-        <div class='footer-logo'>
-          <a class='footer-logo__text' href="#">SIT <strong>ON</strong> CHAIR</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!--<footer class="site-footer clearFix">-->
+    <!--<div class="container">-->
+      <!--<div class="row layout-footer">-->
+        <!--<div class="trademark">-->
+                <!--Copyright 2018 | All Rights Reserved. - Sit On Chair-->
+        <!--</div>-->
+        <!--<div class="social-media">-->
+          <!--<a href="#"><img src="images/flickr.png"/></a>-->
+          <!--<a href="#"><img src="images/vimeo.png"/></a>-->
+          <!--<a href="#"><img src="images/pinterest.png"/></a>-->
+          <!--<a href="#"><img src="images/twitter.png"/></a>-->
+        <!--</div>-->
+        <!--<div class='footer-logo'>-->
+          <!--<a class='footer-logo__text' href="#">SIT <strong>ON</strong> CHAIR</a>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</footer>-->
+</body>
 </html>

@@ -1,21 +1,36 @@
 
 section {
   &.section-one {
+
     @extend %gradient;
     @extend %clear-fix;
+    display: grid;
   }
   > div {
+
     &.container {
       @extend %container;
       @extend %clear-fix;
-      display: flex;
+      //justify-content: center;
     }
     > div {
       &.arrow-left {
-        @include arrow(flex-start);
+        //height: 450px;
+        //width: 25px;
+        color: #24BA9F;
+        font-size: 60px;
+        line-height: 60px;
+        cursor: pointer;
+        justify-self:start;
       }
       &.arrow-right {
-        @include arrow(flex-end);
+        //height: 450px;
+        //width: 25px;
+        color: #24BA9F;
+        font-size: 60px;
+        line-height: 60px;
+        cursor: pointer;
+        justify-self:end;
       }
     }
   }
@@ -23,8 +38,12 @@ section {
 
 div {
   &.chair {
-    width: 470px;
-    padding-top: 50px;
+    //width: 470px;
+    //width: 100%;
+    justify-self: center;
+    align-self: center;
+    //padding-top: 50px;
+    //grid-area: chair;
   }
   > ul {
     &.slider {
@@ -42,7 +61,8 @@ div {
       }
       > img {
         &.slide {
-          width: 360px;
+          //width: 360px;
+          width: 100%;
         }
       }
     }
@@ -51,9 +71,14 @@ div {
 
 div {
   &.section-one-description {
-    width: 478px;
-    padding-right: 100px;
-    padding-top: 130px;
+    //width: 478px;
+    //width: 100%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    //padding-right: 100px;
+    //padding-top: 130px;
+    grid-area: description;
   }
   > div {
     &.headline {
@@ -79,19 +104,136 @@ div {
 
 div {
   &.section-one-description {}
-  > a {
-    > div {
-      &.section-one-button{
+  >label {
+    //align-self: center;
+    display: flex;
+    //width: 218px;
+    > input {
+      &.section-one-button {
         width: 218px;
         height: 44px;
         background-color: #24BA9F;
         text-align: center;
-        margin-left: 80px;
-        padding-top: 10px;
-        margin-top: 20px;
+        //padding-top: 10px;
+        //margin-top: 20px;
         border-radius: 10px;
         font-size: 20px;
+        align-self: center;
+        margin: 20px auto 20px auto;
       }
     }
+  }
+}
+
+
+@media all and (max-width: 1690px) {
+
+  div.grid-container-one{
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    display: grid;
+  }
+
+  div.chair{
+    grid-column: 2/3;
+    //grid-column-end: 3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 350px;
+
+  }
+  div.section-one-description{
+    grid-column: 3/4;
+    //grid-column-end: 4;
+    grid-row: 1/2;
+    width: 90%;
+  }
+  div.arrow-left {
+    //display: none;
+    grid-column: 1/2;
+    //grid-column-end: 2;
+    grid-row: 1/2;
+    align-self: center;
+    //margin: 0 auto;
+  }
+  div.arrow-right{
+    //display: none;
+    grid-column: 4/5;
+    //grid-column-end: 3;
+    grid-row: 1/2;
+    align-self: center;
+    //margin: 0 auto;
+  }
+}
+
+
+@media all and (max-width: 736px){
+
+  div.grid-container-one{
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+
+  div.chair{
+    grid-column: 2/3;
+    //grid-column-end: 3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 350px;
+
+  }
+  div.section-one-description{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 2/3;
+    max-width: 80%;
+  }
+  div.arrow-left {
+    //display: none;
+    grid-column: 1/2;
+    //grid-column-end: 2;
+    grid-row: 1/2;
+    align-self: center;
+    margin: 0 auto;
+  }
+  div.arrow-right{
+    //display: none;
+    grid-column: 3/4;
+    //grid-column-end: 3;
+    grid-row: 1/2;
+    align-self: center;
+    margin: 0 auto;
+  }
+}
+
+
+
+@media all and (max-width: 480px) {
+  div.grid-container-one {
+    grid-template-columns: 1fr;
+  }
+  div.chair{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1/2;
+    width: 100%;
+    //height: 350px;
+
+  }
+  div.section-one-description{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3/4;
+    width: 80%;
+  }
+  div.arrow-left {
+    display: none;
+    //grid-column-start: 1;
+    //grid-column-end: 2;
+    //grid-row: 2/3;
+  }
+  div.arrow-right{
+    display: none;
+    //grid-column-start: 2;
+    //grid-column-end: 3;
+    //grid-row: 2/3;
   }
 }
