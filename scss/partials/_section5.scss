@@ -115,7 +115,7 @@ input {
   margin: 8px 0 8px 0;
 }
 
-@media all and (min-width: 981px) {
+@media all and (min-width: 991px) {
 
   div.grid-container-five {
     grid-template-columns: 1fr 1fr;
@@ -177,10 +177,16 @@ input {
   input.submit {
     margin: 0 auto 16px 4px;
     width: 100%;
+    font-size: 30px;
+  }
+
+  .input-section-five {
+    font-size: 35px;
   }
 }
 
-@media all and (max-width: 980px) {
+@media all and (max-width: 990px) {
+
   div.grid-container-five {
     grid-template-columns: 1fr 1fr;
     display: grid;
@@ -236,6 +242,11 @@ input {
 
   input.submit {
     width: 285px;
+    font-size: 30px;
+  }
+
+  .input-section-five {
+    font-size: 35px;
   }
 }
 
@@ -289,6 +300,10 @@ input {
 
   input.submit {
     width: 250px;
+    font-size: 30px;
+  }
+
+  .input-section-five {
+    font-size: 20px;
   }
 }
-

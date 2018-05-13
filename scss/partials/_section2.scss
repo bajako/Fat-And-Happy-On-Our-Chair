@@ -1,5 +1,4 @@
-
-section{
+section {
   &.section-two {
     @extend %clear-fix;
   }
@@ -12,7 +11,7 @@ section{
 }
 
 div {
-  &.box-one{
+  &.box-one {
     @include box(box1);
   }
   &.box-two {
@@ -26,7 +25,7 @@ div {
       margin: 0;
     }
     > div {
-      &.section-one-underline-one{
+      &.section-one-underline-one {
         @extend %section-one-underline;
       }
     }
@@ -36,10 +35,8 @@ div {
 div {
   &.box-three {
     border: 1px solid #C0C0C0;
-    //height: 250px;
     padding: 25px;
     line-height: 1.4;
-    //margin-top: 20px;
     font-weight: 200;
     width: 100%;
     font-size: 13px;
@@ -52,55 +49,52 @@ div {
   }
 }
 
+@media all and (min-width: 991px) {
 
-@media all and (max-width: 1690px) {
-
-  div.grid-container-two{
+  div.grid-container-two {
     grid-template-columns: 320px 320px 320px;
     grid-column-gap: 20px;
-    //grid-row-gap: 20px;
   }
-  div.box-one{
+
+  div.box-one {
     grid-column: 1/2;
-    //grid-row: 1/2;
     align-self: center;
     margin: 20px 0 auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    //margin-bottom: 40px;
   }
-  div.box-two{
+
+  div.box-two {
     grid-column: 2/3;
-    //grid-row: 1/2;
     align-self: center;
     margin: 20px 0 auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
-  div.box-three{
+
+  div.box-three {
     grid-column: 3/4;
-    //grid-column-end: 4;
-    //grid-row: 2/3;
     align-self: center;
     margin: 20px auto 40px auto;
   }
-  div.image-description{
+
+  div.image-description {
     width: 320px;
     margin: 0 auto;
   }
 }
 
+@media all and (max-width: 990px) {
 
-@media all and (max-width: 980px){
-
-  div.grid-container-two{
+  div.grid-container-two {
     grid-template-columns: 1fr 320px 320px 1fr;
     grid-column-gap: 10px ;
     grid-row-gap: 10px;
   }
-  div.box-one{
+
+  div.box-one {
     grid-column: 2/3;
     grid-row: 1/2;
     align-self: center;
@@ -109,7 +103,8 @@ div {
     background-position: center;
     background-size: cover;
   }
-  div.box-two{
+
+  div.box-two {
     grid-column: 3/4;
     grid-row: 1/2;
     align-self: center;
@@ -118,29 +113,29 @@ div {
     background-position: center;
     background-size: cover;
   }
-  div.box-three{
+
+  div.box-three {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row: 2/3;
     align-self: center;
     margin: 0 auto 10px;
   }
-  div.image-description{
+
+  div.image-description {
     width: 329px;
     margin: 0 auto;
   }
 }
 
+@media all and (max-width: 736px) {
 
-
-
-@media all and (max-width: 736px){
-
-  div.grid-container-two{
+  div.grid-container-two {
     grid-template-columns: 1fr;
     grid-row-gap: 10px;
   }
-  div.box-one{
+
+  div.box-one {
     align-self: center;
     margin: 10px 0 auto;
     background-repeat: no-repeat;
@@ -150,7 +145,8 @@ div {
     grid-column-end: 2;
     grid-row: 1/2;
   }
-  div.box-two{
+
+  div.box-two {
     align-self: center;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -160,28 +156,27 @@ div {
     grid-column-end: 2;
     grid-row: 2/3;
   }
-  div.box-three{
+
+  div.box-three {
     align-self: center;
     margin: 0 auto;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row: 3/4;
   }
-  div.image-description{
+
+  div.image-description {
     width: 100%;
-    //margin: 0 auto;
   }
-
-
 }
 
 @media all and (max-width: 480px) {
 
-div.grid-container-two{
+div.grid-container-two {
   grid-template-columns: 1fr;
   grid-row-gap: 10px;
 }
-  div.box-one{
+  div.box-one {
     align-self: center;
     margin: 10px 0 auto;
     background-repeat: no-repeat;
@@ -191,7 +186,8 @@ div.grid-container-two{
     grid-column-end: 2;
     grid-row: 1/2;
   }
-  div.box-two{
+
+  div.box-two {
     align-self: center;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -201,18 +197,16 @@ div.grid-container-two{
     grid-column-end: 2;
     grid-row: 2/3;
   }
-  div.box-three{
+
+  div.box-three {
     align-self: center;
     margin: 0 auto;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row: 3/4;
   }
+
   div.image-description{
     width: 100%;
-    //margin: 0 auto;
   }
-
-
 }
-

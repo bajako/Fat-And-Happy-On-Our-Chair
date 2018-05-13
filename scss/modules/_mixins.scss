@@ -30,14 +30,11 @@ margin-top: 5px;
 }
 
 %input {
-  //display: block;
-  //width: 100%;
   height: 66px;
   padding: 10px;
   margin-top: auto;
   color:  #24BA9F;
   border: 1px solid #24BA9F;
-  font-size: 35px;
   font-family: 'Raleway', sans-serif;
 }
 @mixin textarea{
