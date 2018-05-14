@@ -8,7 +8,7 @@ At this moment I use:
 - [x] CSS
 - [x] JavaScript
 - [x] SASS
-- [ ] RWD
+- [x] RWD
 - [ ] ...
 
 
