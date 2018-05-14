@@ -1,7 +1,11 @@
 
 
 # Fat And Happy On Our Chair
-it's a website project that develops along my skills.
+It's a website project that developed along my skills. As a part of a workshop, I was given a .jpg file and a task to convey it to the website.
+![alt text](https://github.com/bajako/Fat-And-Happy-On-Our-Chair/blob/master/images/workshop.jpg.png)
+
+
+
 At this moment I use:
 
 - [x] HTML
