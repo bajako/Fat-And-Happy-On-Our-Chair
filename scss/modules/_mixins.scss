@@ -37,11 +37,11 @@ margin-top: 5px;
   border: 1px solid #24BA9F;
   font-family: 'Raleway', sans-serif;
 }
+
 @mixin textarea{
   @extend %input;
   @content;
 }
-
 
 @mixin footer-content($j-content, $p-direction, $p-value, $width){
   justify-content: $j-content;
