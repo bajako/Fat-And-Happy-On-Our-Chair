@@ -2,20 +2,24 @@ section {
   &.section-five {
     @extend %clear-fix;
   }
+
   > div {
     &.container {
       @extend %container;
     }
+
     > div {
       &.section-title-five {
         @extend %section-title;
         margin-bottom: 20px;
       }
+
       > span {
         &.section-title__text {
           @extend %section-title__text;
         }
       }
+
       > div {
         &.section-underline {
           @extend %section-underline;
@@ -30,60 +34,69 @@ div {
   &.form-group {
     margin-bottom: 1em;
   }
-  input.input-section-five {
-    padding: 10px;
-    @extend %input;
-    width: 100%;
-    @extend %placeholder;
-    &:focus {
-      outline-color: #24BA9F;
+
+  input {
+    &.input-section-five {
+      @extend %input;
+      @extend %placeholder;
+      padding: 10px;
+      width: 100%;
+
+      &:focus {
+        outline-color: $jungle-green;
+      }
     }
   }
+
   textarea {
+    @extend %placeholder;
     width: 100%;
+
     @include textarea {
       height: 194px;
       resize: none;
     }
-    @extend %placeholder;
+
     &:focus {
-      outline-color: #24BA9F;
+      outline-color: $jungle-green;
     }
   }
 }
 
 div {
   &.check-box1 {
-    margin-bottom: 1em;
     @extend %check-box-size;
+    margin-bottom: 1em;
   }
+
   &.check-box2 {
-    color: #A9A9A9;
+    @include size(60px, 285px);
+    color: $silver-chalice;
     font-size: 19px;
     margin-bottom: 1em;
     margin-left: 7px;
-    padding-top: 3px;
     padding-left: 2px;
-    @include size(60px, 285px);
+    padding-top: 3px;
   }
+
   input {
     &.check-box {
       @include size(1px, 1px)
     }
-    &:before {
-      background: #ffffff;
-      border: 1px solid #24BA9F;
+
+    &::before {
+      @extend %check-box-size;
+      background: $white;
+      border: 1px solid $jungle-green;
       content: '';
       display: block;
-      @extend %check-box-size;
     }
+
     &:checked {
-      &:before {
-        background-image: url("../images/form_ok.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        box-shadow: 0 0 1px #156f5f;
+      &::before {
         @extend %check-box-size;
+        background: url('../images/approved.jpg') no-repeat center;
+        box-shadow: 0 0 1px $genoa;
       }
     }
   }
@@ -91,93 +104,97 @@ div {
 
 input {
   &.submit {
-    background-color: #24BA9F;
+    @extend %input;
+    background-color: $jungle-green;
     border-radius: 10px;
-    color: #FFFFFF;
+    color: $white;
     cursor: pointer;
     font-weight: 800;
+    height: 64px;
     margin-left: auto;
     margin-right: auto;
-    @extend %input;
-    height: 64px;
+
     &:hover {
-      background-color: pink;
-      border: 1px solid pink;
-      color: #24BA9F;
+      background-color: $pink;
+      border: 1px solid $pink;
+      color: $jungle-green;
     }
   }
 }
 
 .small {
   height: 39px;
-  width: 39px;
   line-height: 55px;
-  margin: 8px 0 8px 0;
+  margin: 8px 0;
+  width: 39px;
 }
 
 @media all and (min-width: 991px) {
-
-  div.grid-container-five {
-    grid-template-columns: 1fr 1fr;
+  .grid-container-five {
     display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  div.section-title-five {
-    grid-column: 1/3;
-    grid-row: 1/2;
+  .section-title-five {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
     justify-self: start;
   }
 
-  div.layout-2 {
+  .layout-2 {
     display: grid;
-    grid-column: 1/3;
-    grid-row: 2/4;
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
     justify-items: center;
   }
 
-  form.form-left {
+  .form-left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
     width: 600px;
-    grid-column: 1/2;
-    grid-row: 2/4;
   }
 
-  img.section-five-img {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin-top: -20px;
+  .section-five-img {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     margin-bottom: 20px;
+    margin-top: -20px;
     padding-left: 60px;
   }
 
-  form.form-right {
+  .form-right {
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-content: center;
     padding-left: 60px;
     width: 400px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-self: center;
-    grid-column: 2/3;
-    grid-row: 3/4;
   }
 
-  div.check-box1 {
-    flex-grow: 1;
-  }
+  div {
+    &.check-box1 {
+      flex-grow: 1;
+    }
 
-  div.check-box2 {
-    flex-grow: 1;
-    width: 285px;
-    padding-left: 10px;
+    &.check-box2 {
+      flex-grow: 1;
+      padding-left: 10px;
+      width: 285px;
+    }
   }
 
   label {
     flex-grow: 2;
   }
 
-  input.submit {
-    margin: 0 auto 16px 4px;
-    width: 100%;
-    font-size: 30px;
+  input {
+    &.submit {
+      font-size: 30px;
+      margin: 0 auto 16px 4px;
+      width: 100%;
+    }
   }
 
   .input-section-five {
@@ -186,63 +203,68 @@ input {
 }
 
 @media all and (max-width: 990px) {
-
-  div.grid-container-five {
-    grid-template-columns: 1fr 1fr;
+  .grid-container-five {
     display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  div.section-title-five {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    justify-self: center;
+  .section-title-five {
     display: block;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
     text-align: center;
   }
 
-  img.section-five-img {
+  .section-five-img {
     display: none;
   }
 
-  div.layout-2 {
+  .layout-2 {
     display: grid;
-    grid-column: 1/3;
-    grid-row: 2/3;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
     justify-items: center;
   }
 
-  form.form-left {
+  .form-left {
+    grid-column: 1 / 2;
     width: 90%;
-    grid-column: 1/2;
   }
 
-  form.form-right {
+  .form-right {
+    align-self: center;
     display: flex;
     flex-direction: column;
+    grid-column: 2 / 3;
     justify-content: center;
-    align-self: center;
     margin: 0 auto;
-    grid-column: 2/3;
   }
 
-  div.check-box1 {
-    order: 2;
-    margin: 40px auto;
+  div {
+    &.check-box1 {
+      margin: 40px auto;
+      order: 2;
+    }
+
+    &.check-box2 {
+      margin: 0 auto -20px;
+      order: 1;
+      text-align: center;
+    }
   }
 
-  div.check-box2 {
-    order: 1;
-    margin: 0 auto -20px;
-    text-align: center;
+  label {
+    &.submit {
+      order: 3;
+    }
   }
 
-  label.submit {
-    order: 3;
-  }
-
-  input.submit {
-    width: 285px;
-    font-size: 30px;
+  input {
+    &.submit {
+      font-size: 30px;
+      width: 285px;
+    }
   }
 
   .input-section-five {
@@ -251,56 +273,60 @@ input {
 }
 
 @media all and (max-width: 736px) {
-
-  div.grid-container-five {
-    grid-template-columns: 1fr;
+  .grid-container-five {
     display: grid;
+    grid-template-columns: 1fr;
   }
 
-  div.section-title-five {
-    grid-row: 1/2;
-    grid-column: 1/2;
+  .section-title-five {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
-  img.section-five-img {
+  .section-five-img {
     display: none;
   }
 
-  div.layout-2 {
+  .layout-2 {
     display: grid;
-    grid-row: 2/3;
-    grid-column: 1/2;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
   }
 
-  form.form-left {
-    grid-column: 1/2;
+  .form-left {
+    grid-column: 1 / 2;
     justify-self: center;
     width: 90%;
   }
 
-  form.form-right {
-    grid-column: 1/2;
+  .form-right {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    grid-column: 1 / 2;
     justify-content: center;
-    width: 90%;
     margin: 0 auto;
+    width: 90%;
   }
 
-  div.check-box1 {
-    order: 1;
-    margin: 5px;
+  div {
+    &.check-box1 {
+      margin: 5px;
+      order: 1;
+    }
+
+    &.check-box2 {
+      margin: 5px;
+      order: 2;
+    }
   }
 
-  div.check-box2 {
-    order: 2;
-    margin: 5px;
-  }
-
-  input.submit {
-    width: 250px;
-    font-size: 30px;
+  input {
+    &.submit {
+      font-size: 30px;
+      width: 250px;
+    }
   }
 
   .input-section-five {

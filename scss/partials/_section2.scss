@@ -2,6 +2,7 @@ section {
   &.section-two {
     @extend %clear-fix;
   }
+
   > div {
     &.container {
       @extend %clear-fix;
@@ -14,16 +15,20 @@ div {
   &.box-one {
     @include box(box1);
   }
+
   &.box-two {
     @include box(box2);
   }
+
   > div {
     &.image-description {
       @extend %image-description;
     }
+
     > h3 {
       margin: 0;
     }
+
     > div {
       &.section-one-underline-one {
         @extend %section-one-underline;
@@ -34,179 +39,181 @@ div {
 
 div {
   &.box-three {
-    border: 1px solid #C0C0C0;
-    padding: 25px;
-    line-height: 1.4;
-    font-weight: 200;
-    width: 100%;
+    border: 1px solid $silver;
     font-size: 13px;
+    font-weight: 200;
+    line-height: 1.4;
+    padding: 25px;
+    width: 100%;
   }
+
   > div {
     &.section-one-underline-two {
       @extend %section-one-underline;
-      margin: 0 0 20px 0;
+      margin: 0 0 20px;
     }
   }
 }
 
 @media all and (min-width: 991px) {
-
-  div.grid-container-two {
-    grid-template-columns: 320px 320px 320px;
+  .grid-container-two {
     grid-column-gap: 20px;
+    grid-template-columns: 320px 320px 320px;
   }
 
-  div.box-one {
-    grid-column: 1/2;
+  .box-one {
     align-self: center;
-    margin: 20px 0 auto;
-    background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-  }
-
-  div.box-two {
-    grid-column: 2/3;
-    align-self: center;
-    margin: 20px 0 auto;
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    grid-column: 1 / 2;
+    margin: 20px 0 auto;
   }
 
-  div.box-three {
-    grid-column: 3/4;
+  .box-two {
     align-self: center;
-    margin: 20px auto 40px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 2 / 3;
+    margin: 20px 0 auto;
   }
 
-  div.image-description {
-    width: 320px;
+  .box-three {
+    align-self: center;
+    grid-column: 3 / 4;
+    margin: 20px auto 40px;
+  }
+
+  .image-description {
     margin: 0 auto;
+    width: 320px;
   }
 }
 
 @media all and (max-width: 990px) {
-
-  div.grid-container-two {
-    grid-template-columns: 1fr 320px 320px 1fr;
-    grid-column-gap: 10px ;
+  .grid-container-two {
+    grid-column-gap: 10px;
     grid-row-gap: 10px;
+    grid-template-columns: 1fr 320px 320px 1fr;
   }
 
-  div.box-one {
-    grid-column: 2/3;
-    grid-row: 1/2;
+  .box-one {
     align-self: center;
-    margin: 10px 0 auto;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 10px 0 auto;
   }
 
-  div.box-two {
-    grid-column: 3/4;
-    grid-row: 1/2;
+  .box-two {
     align-self: center;
-    margin: 10px 0 auto;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    margin: 10px 0 auto;
   }
 
-  div.box-three {
-    grid-column-start: 2;
+  .box-three {
+    align-self: center;
     grid-column-end: 4;
-    grid-row: 2/3;
-    align-self: center;
+    grid-column-start: 2;
+    grid-row: 2 / 3;
     margin: 0 auto 10px;
   }
 
-  div.image-description {
-    width: 329px;
+  .image-description {
     margin: 0 auto;
+    width: 329px;
   }
 }
 
 @media all and (max-width: 736px) {
-
-  div.grid-container-two {
-    grid-template-columns: 1fr;
+  .grid-container-two {
     grid-row-gap: 10px;
+    grid-template-columns: 1fr;
   }
 
-  div.box-one {
-    align-self: center;
-    margin: 10px 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 1/2;
+  div {
+    &.box-one {
+      align-self: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-column-end: 2;
+      grid-column-start: 1;
+      grid-row: 1 / 2;
+      margin: 10px 0 auto;
+    }
+
+    &.box-two {
+      align-self: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-column-end: 2;
+      grid-column-start: 1;
+      grid-row: 2 / 3;
+      margin: 0 auto;
+    }
+
+    &.box-three {
+      align-self: center;
+      grid-column-end: 2;
+      grid-column-start: 1;
+      grid-row: 3 / 4;
+      margin: 0 auto;
+    }
   }
 
-  div.box-two {
-    align-self: center;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 2/3;
-  }
-
-  div.box-three {
-    align-self: center;
-    margin: 0 auto;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 3/4;
-  }
-
-  div.image-description {
+  .image-description {
     width: 100%;
   }
 }
 
 @media all and (max-width: 480px) {
-
-div.grid-container-two {
-  grid-template-columns: 1fr;
-  grid-row-gap: 10px;
-}
-  div.box-one {
-    align-self: center;
-    margin: 10px 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 1/2;
+  .grid-container-two {
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr;
   }
 
-  div.box-two {
-    align-self: center;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 2/3;
+  div {
+    &.box-one {
+      align-self: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-column-end: 2;
+      grid-column-start: 1;
+      grid-row: 1 / 2;
+      margin: 10px 0 auto;
+    }
+
+    &.box-two {
+      align-self: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-column-end: 2;
+      grid-column-start: 1;
+      grid-row: 2 / 3;
+      margin: 0 auto;
+    }
+
+    &.box-three {
+      align-self: center;
+      grid-column-end: 2;
+      grid-column-start: 1;
+      grid-row: 3 / 4;
+      margin: 0 auto;
+    }
   }
 
-  div.box-three {
-    align-self: center;
-    margin: 0 auto;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 3/4;
-  }
-
-  div.image-description{
+  .image-description {
     width: 100%;
   }
 }

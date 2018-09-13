@@ -1,5 +1,4 @@
-/*-----HEADER-----*/
-
+//-----HEADER-----//
 
 * {
   box-sizing: border-box;
@@ -11,12 +10,14 @@ body {
 }
 
 header {
-  &.site-header{
-    background-color: black;
+  &.site-header {
     @extend %clear-fix;
+    background-color: $black;
   }
+
   > .container {
     @extend %container;
+
     > .layout-2-col {
       @extend %clear-fix;
       display: flex;
@@ -28,16 +29,18 @@ div {
   &.logo-header {
     font-size: 14px;
     font-weight: 600;
-    width: 50%;
-    padding: 12px 0 12px 0;
     letter-spacing: 1px;
+    padding: 12px 0;
+    width: 50%;
   }
+
   > a {
-    color: #FFFFFF;
-    text-decoration: none;
+    color: $white;
     display: inline-flex;
+    text-decoration: none;
+
     > span {
-      color: #24BA9F;
+      color: $jungle-green;
       font-weight: 900;
     }
   }
@@ -47,70 +50,81 @@ nav {
   &[role=navigation] {
     width: 50%;
   }
+
   > ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
     position: relative;
-    &.navBar {
+
+    &.nav-bar {
       display: flex;
-      width: 600px;
       margin: auto;
       padding-left: 160px;
+      width: 600px;
     }
   }
 }
 
-ul.navBar {
+.nav-bar {
   li {
     padding: 10px 25px;
-    &:hover{
-      > ul{
-        &.dropDown{
+
+    &:hover {
+
+      > ul {
+        &.drop-down {
           display: block;
         }
       }
     }
+
     > a {
-      color: #FFFFFF;
-      text-align: right;
+      color: $white;
       font-size: 14px;
       font-weight: 700;
-      text-decoration: none;
       letter-spacing: 1px;
+      text-align: right;
+      text-decoration: none;
     }
+
     > ul {
+      list-style: none;
       margin: 0;
       padding: 0;
-      list-style: none;
-      &.dropDown {
-        position: absolute;
+
+      &.drop-down {
         display: none;
         padding-top: 20px;
+        position: absolute;
       }
+
       > div {
         &.triangle {
+          border-color: transparent transparent $black;
+          border-style: solid;
+          border-width: 0 8px 12px;
+          margin-left: 30px;
           position: absolute;
           top: 10px;
-          margin-left: 30px;
-          border-style: solid;
-          border-width: 0 8px 12px 8px;
-          border-color: transparent transparent #000000 transparent;
         }
       }
+
       > li {
+        background-color: $black;
         display: block;
         padding: 10px 20px 0 10px;
-        background-color: #000000;
+
         &:last-child {
           padding-bottom: 10px;
         }
+
         > a {
-          color: #FFFFFF;
+          background-color: $black;
+          color: $white;
           display: block;
-          text-align: left;
-          background-color: black;
           letter-spacing: normal;
+          text-align: left;
         }
       }
     }

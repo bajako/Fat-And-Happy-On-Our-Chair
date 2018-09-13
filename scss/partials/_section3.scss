@@ -1,32 +1,38 @@
 section {
   &.section-three {
-    background-color: #F1F1F1;
     @extend %clear-fix;
+    background-color: $seashell;
   }
+
   > div {
     &.container {
       @extend %container;
     }
+
     &.flex-direction {
       flex-direction: column;
     }
+
     > div {
       &.section-title-three {
         @extend %section-title;
       }
+
       > span {
         &.section-title__text {
           @extend %section-title__text;
         }
       }
+
       > div {
         &.section-underline {
           @extend %section-underline;
         }
       }
+
       &.layout-3 {
-        margin-top: 70px;
         @extend %clear-fix;
+        margin-top: 70px;
       }
     }
   }
@@ -37,295 +43,321 @@ div {
     display: none;
     justify-content: center;
   }
+
   &.visible {
     display: inline-block;
     margin: 0 auto;
   }
+
   &.arrow-left-price {
-    color: #24BA9F;
-    font-size: 60px;
-    line-height: 60px;
-    cursor: pointer;
-    justify-self: center;
     align-self: center;
+    color: $jungle-green;
+    cursor: pointer;
+    font-size: 60px;
+    justify-self: center;
+    line-height: 60px;
   }
+
   &.arrow-right-price {
-    color: #24BA9F;
-    font-size: 60px;
-    line-height: 60px;
-    cursor: pointer;
-    justify-self: center;
     align-self: center;
+    color: $jungle-green;
+    cursor: pointer;
+    font-size: 60px;
+    justify-self: center;
+    line-height: 60px;
   }
+
   &.sticker-one {
-    @include sticker(#C0C0C0, #F9F9F9, auto)
+    @include sticker($silver, $alabaster, auto)
   }
+
   &.sticker-two {
-    @include sticker(#24BA9F, #24BA9F, auto);
+    @include sticker($jungle-green, $jungle-green, auto);
   }
+
   &.sticker-three {
-    @include sticker(#C0C0C0, #F9F9F9, auto)
+    @include sticker($silver, $alabaster, auto)
   }
+
   > div {
     &.circle-small-one {
-      background-color: #C0C0C0;
       @extend %circle-small;
+      background-color: $silver;
     }
+
     &.circle-small-two {
-      background-color: #FFFFFF;
       @extend %circle-small;
+      background-color: $white;
     }
   }
+
   > div {
     &.circle-big-one {
-      background-color: #FFFFFF;
-      border: 2px solid #C0C0C0;
       @extend %circle-big;
+      background-color: $white;
+      border: 2px solid $silver;
     }
+
     &.circle-big-two {
-      background-color: #24BA9F;
       @extend %circle-big;
+      background-color: $jungle-green;
     }
   }
+
   > div {
     &.plan-one {
       @extend %plan;
-      color: #24BA9F;
+      color: $jungle-green;
     }
+
     &.plan-two {
       @extend %plan;
-      color: #FFFFFF;
+      color: $white;
     }
   }
+
   > div {
     &.circle-price-one {
-      border: 2px solid #C0C0C0;
-      color: #C0C0C0;
       @extend %circle-price;
+      border: 2px solid $silver;
+      color: $silver;
     }
+
     &.circle-price-two {
-      color: #24BA9F;
       @extend %circle-price;
+      color: $jungle-green;
     }
+
     > p {
       &.circle-one-price-value {
         @extend %circle-price-value;
       }
+
       &.circle-two-price-value {
         @extend %circle-price-value;
       }
+
       > sup {
         @extend %sup;
       }
     }
+
     > span {
       &.circle-price-curency {
         @extend %circle-price-curency;
       }
+
       &.circle-two-price-curency {
         @extend %circle-price-curency;
       }
     }
   }
+
   > div {
     &.description-one {
-      background-color: #E4E4E4;
-      color: #848484;
       @extend %description;
+      background-color: $mercury;
+      color: $gray;
     }
   }
+
   > div {
     &.description-two {
-      background-color: #F1F1F1;
-      color: #848484;
       @extend %description;
+      background-color: $seashell;
+      color: $gray;
     }
   }
+
   > div {
     &.description-three {
-      background-color: #FFFFFF;
-      color: #848484;
       @extend %description;
+      background-color: $white;
+      color: $gray;
     }
   }
+
   > div {
     &.description-four {
-      background-color: #F1F1F1;
-      color: #848484;
       @extend %description;
+      background-color: $seashell;
+      color: $gray;
     }
   }
+
   > label {
     > input {
       &.btn-join-one {
         @extend %btn-join;
-        color: #FFFFFF;
-        background-color: #24BA9F;
+        background-color: $jungle-green;
+        color: $white;
       }
+
       &.btn-join-two {
         @extend %btn-join;
-        background-color: #FFFFFF;
-        color: #24BA9F;
+        background-color: $white;
+        color: $jungle-green;
       }
     }
   }
 }
 
 @media all and (min-width: 991px) {
-
-  div.grid-container-three {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 40px;
-    grid-column-gap: 20px;
+  .grid-container-three {
     display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  div.sticker-one {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin: 0 auto;
-    display: initial;
+  div {
+    &.sticker-one {
+      display: initial;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 0 auto;
+    }
+
+    &.sticker-two {
+      display: initial;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      margin: 0 auto;
+    }
+
+    &.sticker-three {
+      display: initial;
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      margin: 0 auto;
+    }
   }
 
-  div.sticker-two {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin: 0 auto;
-    display: initial;
-  }
-
-  div.sticker-three {
-    grid-column: 3/4;
-    margin: 0 auto;
-    grid-row: 1/2;
-    display: initial;
-  }
-
-  div.arrow-left-price {
+  .arrow-left-price {
     display: none;
   }
 
-  div.arrow-right-price {
+  .arrow-right-price {
     display: none;
   }
 }
 
 @media all and (max-width: 990px){
-  div.section-title-three {
+  .section-title-three {
     display: grid;
     justify-content: center;
     text-align: center;
   }
 
-  div.grid-container-three {
-    grid-template-columns: 1fr 1fr 1fr;
+  .grid-container-three {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
   }
 
-  div.sticker-one {
-    grid-column: 2/3;
-    grid-row: 1/2;
+  .sticker-one {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
-  div.sticker-two {
-    grid-column: 2/3;
-    grid-row: 1/2;
+  .sticker-two {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
-  div.sticker-three {
-    grid-column: 2/3;
-    grid-row: 1/2;
+  .sticker-three {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
-  div.arrow-left-price {
-    grid-column: 1/2;
-    grid-row: 1/2;
+  .arrow-left-price {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
-  div.arrow-right-price {
-    grid-column: 3/4;
-    grid-row: 1/2;
+  .arrow-right-price {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 }
 
 @media all and (max-width: 736px) {
-
-  div.section-title-three {
+  .section-title-three {
     display: grid;
     justify-content: center;
     text-align: center;
   }
 
-  div.grid-container-three {
-    grid-template-columns: 1fr 1fr 1fr;
+  .grid-container-three {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
   }
 
-  div.sticker-one {
-    grid-column: 2/3;
-    grid-row: 1/2;
+  .sticker-one {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
-  div.sticker-two {
-    grid-column: 2/3;
-    grid-row: 1/2;
+  .sticker-two {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
-  div.sticker-three {
-    grid-column: 2/3;
-    grid-row: 1/2;
+  .sticker-three {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
-  div.arrow-left-price {
-    grid-column: 1/2;
-    grid-row: 1/2;
+  .arrow-left-price {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
-  div.arrow-right-price {
-    grid-column: 3/4;
-    grid-row: 1/2;
+  .arrow-right-price {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 }
 
 @media all and (max-width: 480px) {
-
-  div.section-title-three {
+  .section-title-three {
     display: grid;
     justify-content: center;
     text-align: center;
   }
 
-  div.grid-container-three {
-    grid-template-columns: 1fr;
+  .grid-container-three {
     display: grid;
+    grid-template-columns: 1fr;
   }
 
-  div.sticker-one {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    display: block;
+  div {
+    &.sticker-one {
+      display: block;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &.sticker-two {
+      display: block;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin: 60px auto;
+    }
+
+    &.sticker-three {
+      display: block;
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
   }
 
-  div.sticker-two {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    display: block;
-    margin: 60px auto;
-  }
-
-  div.sticker-three {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    display: block;
-  }
-
-  div.arrow-left-price {
+  .arrow-left-price {
     display: none;
   }
 
-  div.arrow-right-price {
+  .arrow-right-price {
     display: none;
   }
 }

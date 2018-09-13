@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "scss/block-no-empty": true,
+    "scss/color-no-invalid-hex": true,
+    "scss/declaration-colon-space-after": "always",
+    "scss/declaration-colon-space-before": "never",
+    "scss/function-comma-space-after": "always",
+    "scss/function-url-quotes": "double",
+    "scss/media-feature-colon-space-after": "always",
+    "scss/media-feature-colon-space-before": "never",
+    "scss/media-feature-name-no-vendor-prefix": true,
+    "scss/max-empty-lines": 5,
+    "scss/number-leading-zero": "never",
+    "scss/number-no-trailing-zeros": true,
+    "scss/property-no-vendor-prefix": true,
+    "scss/rule-no-duplicate-properties": true,
+    "scss/declaration-block-no-single-line": true,
+    "scss/rule-trailing-semicolon": "always",
+    "scss/selector-list-comma-space-before": "never",
+    "scss/selector-list-comma-newline-after": "always",
+    "scss/selector-no-id": true,
+    "scss/string-quotes": "double",
+    "scss/value-no-vendor-prefix": true
+  }
+}
