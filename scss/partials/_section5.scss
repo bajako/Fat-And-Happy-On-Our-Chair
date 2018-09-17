@@ -64,12 +64,7 @@ div {
 }
 
 div {
-  &.check-box1 {
-    @extend %check-box-size;
-    margin-bottom: 1em;
-  }
-
-  &.check-box2 {
+  &.agreement {
     @include size(60px, 285px);
     color: $silver-chalice;
     font-size: 19px;
@@ -77,28 +72,6 @@ div {
     margin-left: 7px;
     padding-left: 2px;
     padding-top: 3px;
-  }
-
-  input {
-    &.check-box {
-      @include size(1px, 1px)
-    }
-
-    &::before {
-      @extend %check-box-size;
-      background: $white;
-      border: 1px solid $jungle-green;
-      content: '';
-      display: block;
-    }
-
-    &:checked {
-      &::before {
-        @extend %check-box-size;
-        background: url('../images/approved.jpg') no-repeat center;
-        box-shadow: 0 0 1px $genoa;
-      }
-    }
   }
 }
 

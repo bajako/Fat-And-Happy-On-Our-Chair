@@ -131,11 +131,49 @@ div {
 }
 
 div {
+  &.compose-check-box1 {
+    > input {
+      &#trans,
+      &#agreement {
+        left: -9999px;
+        position: absolute;
+
+        &:checked + label {
+          &.check::before {
+            background: url('../images/approved.jpg') no-repeat center;
+            border: 1px solid $jungle-green;
+            box-shadow: 0 0 1px $genoa;
+            box-sizing: border-box;
+            content: '';
+            display: block;
+            height: 46px;
+            justify-content: flex-end;
+            position: absolute;
+            width: 46px;
+          }
+        }
+      }
+    }
+
+    > label {
+      &.check {
+        @extend %check-box-size;
+        background: $white;
+        border: 1px solid $jungle-green;
+        display: block;
+        position: relative;
+      }
+    }
+  }
+}
+
+div {
   &.compose-check-box2 {
     color: $silver-chalice;
     font-size: 30px;
     height: 60px;
     line-height: 60px;
+    margin-left: 30px;
   }
 }
 
