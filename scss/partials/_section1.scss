@@ -32,6 +32,77 @@ section {
 }
 
 div {
+  &.modal-container {
+    display: flex;
+  }
+
+  > div {
+    &.modal {
+      background-color: $black-50;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      transform: scale(1.1);
+      transition: visibility 0s linear .25s, opacity .25s 0s, transform .25s;
+      visibility: hidden;
+      width: 100%;
+    }
+
+    &.show-modal {
+      opacity: 1;
+      transform: scale(1);
+      transition: visibility 0s linear 0s, opacity .25s 0s, transform .25s;
+      visibility: visible;
+    }
+
+    > div {
+      &.modal-content {
+        background-color: $white;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 300px;
+        justify-content: center;
+        left: 50%;
+        padding: 1rem 1.5rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+      }
+
+      > h1 {
+        &.modal-title {
+          text-align: center;
+          width: 400px;
+        }
+      }
+
+      > div {
+        &.storage {
+          border: 1px solid $mischka;
+          border-radius: .5rem;
+          font-size: 20px;
+          height: 60px;
+          line-height: 20px;
+          margin: 50px;
+          padding: 20px;
+          text-align: center;
+          width: 150px;
+
+          &:hover {
+            background-color: $silver-chalice;
+          }
+        }
+      }
+    }
+  }
+}
+
+div {
   &.chair {
     align-self: center;
     justify-self: center;
