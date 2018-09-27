@@ -13,9 +13,6 @@ gulp.task('sass', ['scss-lint'], function () {
       outputStyle: 'expanded'
     }))
     .pipe(sourcemaps.write())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
     .pipe(gulp.dest('css'));
 });
 

@@ -14,14 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
     changeNumber(first, second, third)
   });
 
-  changeNumber = (first, second, third) => {
+  const changeNumber = (first, second, third) => {
 
     const event = new CustomEvent('colorWhileScroll', {
-
       detail: {
         scrollColor: `rgb(${first}, ${second}, ${third})`
       }
-
     });
 
     colorfulButton.dispatchEvent(event);

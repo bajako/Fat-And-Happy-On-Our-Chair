@@ -3,8 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const accept = document.querySelector('.accept');
   const cancel = document.querySelector('.cancel');
   const modal = document.querySelector('.modal');
+  const showModal = document.querySelector('.modal-container');
   const now = new Date().getTime().toString();
   let timeDifference = null;
+
+  let addPlugin = () => {
+    showModal.style.display = "flex";
+  };
+
 
   let compareTimestamps = (now) => {
     let myRecordInLocalStorage = JSON.parse(localStorage.getItem('optAd360'));
@@ -35,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.removeEventListener('scroll', noScroll);
   };
 
+  addPlugin();
 
   if (localStorage.getItem('optAd360') !== null) {
 
