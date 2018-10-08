@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   let compareTimestamps = (now) => {
-    let myRecordInLocalStorage = JSON.parse(localStorage.getItem('optAd360'));
+    let myRecordInLocalStorage = JSON.parse(localStorage.getItem('test'));
     let dateString = myRecordInLocalStorage.timestamp;
 
     timeDifference = (parseInt(now) - parseInt(dateString)) / 1000;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   let removeRecordFromLocalStorage = () => {
-    return localStorage.removeItem('optAd360');
+    return localStorage.removeItem('test');
   };
 
   let removeModal = () => {
@@ -43,15 +43,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   addPlugin();
 
-  if (localStorage.getItem('optAd360') !== null) {
+  if (localStorage.getItem('test') !== null) {
 
     compareTimestamps(now);
 
-    if (timeDifference < 86400) {
+    if (timeDifference < 300) {
 
       removeModal();
 
-    } else if (timeDifference > 86400) {
+    } else if (timeDifference > 300) {
 
       removeRecordFromLocalStorage();
       handleModal()
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (accept.dataset.id === 'true') {
 
       let myRecordInLocalStorage = {timestamp: new Date().getTime()};
-      localStorage.setItem('optAd360', JSON.stringify(myRecordInLocalStorage));
+      localStorage.setItem('test', JSON.stringify(myRecordInLocalStorage));
 
     }
   };
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (cancel.dataset.id === 'true') {
 
       let myRecordInLocalStorage = {timestamp: new Date().getTime()};
-      localStorage.setItem('optAd360', JSON.stringify(myRecordInLocalStorage));
+      localStorage.setItem('test', JSON.stringify(myRecordInLocalStorage));
 
     }
   };
